@@ -6,6 +6,8 @@ type Props = {}
 
 const Header = (props: Props) => {
 
+    const navigate = useNavigate()
+
   return (
     <section className='section-header'>
         <nav className="menu-hamburger">
@@ -21,13 +23,14 @@ const Header = (props: Props) => {
                         src="https://i.ibb.co/WHSn8nt/logo-Pormade-3.png" 
                         alt="logo" 
                         className='logo'
+                        onClick={() => navigate('/')}
                     />
                 </li>
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#">Reservar</a>
+                    <a href="/reserve">Reservar</a>
                 </li>
                 <li>
                     <a href="#">Relatório</a>
