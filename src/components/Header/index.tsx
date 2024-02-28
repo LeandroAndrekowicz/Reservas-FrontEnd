@@ -1,9 +1,11 @@
 import React from 'react'
 import './Header.css'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const Header = (props: Props) => {
+
   return (
     <section className='section-header'>
         <nav className="menu-hamburger">
@@ -15,7 +17,14 @@ const Header = (props: Props) => {
             </label>
             <ul className="menu-hamburguer-elements show">
                 <li>
-                    <a href="#">Home</a>
+                    <img 
+                        src="https://i.ibb.co/WHSn8nt/logo-Pormade-3.png" 
+                        alt="logo" 
+                        className='logo'
+                    />
+                </li>
+                <li>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="#">Reservar</a>
