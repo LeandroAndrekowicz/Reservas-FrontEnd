@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Reserve.css'
 import Header from '../../components/Header'
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+
 
 type Props = {}
 
 const Reserve = (props: Props) => {
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <section>
         <Header />
@@ -26,9 +31,10 @@ const Reserve = (props: Props) => {
             </div>
             <div className='container-info'>
               <label className='form-label'>Data</label>
+              <DatePicker selected={startDate} onChange={(date : Date) => setStartDate(date)} />
             </div>
         </form>
-    </section>
+    </section> 
   )
 }
 
