@@ -2,10 +2,18 @@ import React from 'react'
 import './Home.css'
 import Header from '../../components/Header'
 import Button from '../../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 type Props = {}
 
 const Home = (props: Props) => {
+
+  const navigate = useNavigate();
+
+  const goReserve = () => {
+    navigate('/reserve');
+  } 
+
   return (
     <div>
         <Header />
@@ -21,7 +29,7 @@ const Home = (props: Props) => {
             <p>O que achou? Vamos agendar uma visita até você?</p>
           </div>
           <div className='button-sobre'>
-            <Button text='Agendar'/>
+            <Button text='Agendar' onclick={goReserve}/>
           </div>
           <div className='gallery'>
             <figure className='gallery__item gallery__item--1'>

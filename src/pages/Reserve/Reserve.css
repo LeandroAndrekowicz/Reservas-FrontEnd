@@ -10,18 +10,18 @@
 .container-info{
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .form-input{
-    width: 50%;
+    width: 65%;
     height: 3em;
     display: flex !important;
-    margin-top: 3em;
     justify-content: center;
     align-items: center;
-    background-color: #292929;
+    background-color: #E8F9FD;
     border-radius: .9em;
 }
 
@@ -32,10 +32,58 @@
 }
 
 .form-label{
-    width: 30%;
+    width: 20%;
     color: white;
-    margin-top: 3em;
     display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: center;
+    margin-left: 6vw;
+}
+
+.form-style{
+    width: 80%;
+    border: 2px solid #509D45;
+    border-radius: 2em;
+    margin-top: 2em;
+}
+
+.container-info-button{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-info-button button{
+    width: 50%;
+    margin-bottom: 2em;
+}
+
+.react-datepicker-wrapper {
+    width: 65%;
+}
+
+.react-datepicker__input-container{
+    width: 100%;
+}
+
+.form-input-data{
+    width: 100%;
+    height: 3em;
+    display: flex !important;
     justify-content: center;
     align-items: center;
+    background-color: #E8F9FD;
+    border-radius: .9em;
+}
+
+@media (max-width: 600px) {
+    .container-info{
+        flex-direction: column;
+    }
+
+    .form-label {
+        width: 70%;
+    }
 }
