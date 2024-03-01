@@ -42,6 +42,7 @@ const Reserve = () => {
                     ...formData,
                     name: e.target.value
                   })}
+                  required
                 />
               </div>
 
@@ -55,6 +56,7 @@ const Reserve = () => {
                     ...formData,
                     email: e.target.value
                   })}  
+                  required
                 />
               </div>
 
@@ -68,6 +70,7 @@ const Reserve = () => {
                     ...formData,
                     phone: e.target.value
                   })}
+                  required
                 />
               </div>
 
@@ -80,7 +83,9 @@ const Reserve = () => {
                     ...formData,
                     data: date
                   })} 
-                  minDate={new Date()}/>
+                  minDate={new Date()}
+                  required
+                />
               </div>
 
               <div className='container-info-button'>
