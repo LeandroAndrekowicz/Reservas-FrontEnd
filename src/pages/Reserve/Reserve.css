@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    margin-bottom: 2vw;
 }
 
 .container-info{
@@ -13,6 +14,7 @@
     align-items: center;
     margin-bottom: 2em;
     margin-top: 2em;
+    flex-direction: column;
 }
 
 .form-input{
@@ -23,6 +25,8 @@
     align-items: center;
     background-color: #E8F9FD;
     border-radius: .9em;
+    outline: none;
+    padding-left: .5em;
 }
 
 .container-titulo h2{
@@ -32,13 +36,10 @@
 }
 
 .form-label{
-    width: 20%;
     color: white;
-    display: flex;
-    position: relative;
-    justify-content: start;
-    align-items: center;
-    margin-left: 6vw;
+    margin-bottom: 1vw;
+    width: 100%;
+    text-align: center;
 }
 
 .form-style{
@@ -76,14 +77,23 @@
     align-items: center;
     background-color: #E8F9FD;
     border-radius: .9em;
+    outline: none;
+    padding-left: .5em;
+}
+
+.react-datepicker__day--disabled, .react-datepicker__day--disabled:hover{
+    background-color: rgba(255, 0, 0, 0.747) !important;
+    color: white !important;
+    font-weight: 900 !important;
+}
+
+
+.react-datepicker__day--selected{
+    background-color: #509D45 !important;
 }
 
 @media (max-width: 600px) {
     .container-info{
         flex-direction: column;
-    }
-
-    .form-label {
-        width: 70%;
     }
 }

@@ -3,7 +3,7 @@ import './Button.css'
 
 type Props = {
     text: string;
-    onclick: () => void;
+    onclick?: () => void;
 }
 
 const Button = (props: Props) => {
