@@ -37,14 +37,16 @@
 
 .form-label{
     color: white;
-    margin-bottom: 1vw;
-    width: 100%;
-    text-align: center;
+    width: 65%;
+    text-align: start;
+    margin-bottom: 4px;
+    margin-left: 1.5vw;
+    font-weight: 900;
 }
 
 .form-style{
     width: 80%;
-    border: 2px solid #509D45;
+    border: 1px solid #509D45;
     border-radius: 2em;
     margin-top: 2em;
 }

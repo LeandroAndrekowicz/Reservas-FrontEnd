@@ -46,7 +46,6 @@ const Reserve = () => {
 
   const findAllDates = async () => {
     await api.get('/reserve/dates/').then((response) => {
-      console.log(response.data.dates);
       setReservedDates(response.data.dates)
     })
   }
@@ -126,6 +125,7 @@ const Reserve = () => {
                 <div className='container-info-button'>
                   <Button text='Reservar'/>;
                 </div>
+                
                 <ToastContainer />
 
               </div>

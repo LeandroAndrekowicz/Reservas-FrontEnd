@@ -1,12 +1,29 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Header.css'
 import { useNavigate } from 'react-router-dom'
+import { jwtDecode } from 'jwt-decode'
 
 type Props = {}
 
 const Header = (props: Props) => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const [logged, setLogged] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+
+        if(token) {
+            try {
+                const decode = jwtDecode(token);
+
+                setLogged(true);
+            } catch (error) {
+                setLogged(false);
+            }
+        }
+    },[])
 
   return (
     <section className='section-header'>
@@ -32,9 +49,16 @@ const Header = (props: Props) => {
                 <li>
                     <a href="/reserve">Reservar</a>
                 </li>
-                <li>
-                    <a href="#">Relatório</a>
-                </li>
+                {   logged  ? 
+                            <li>
+                                <a href="/report">Relatório</a>
+                            </li>
+                            :
+                            <li>
+                                <a href="/login">Login</a>
+                            </li>
+                }
+
             </ul>
         </nav>
     </section>
